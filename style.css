@@ -1,0 +1,270 @@
+@@ -0,0 +1,269 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background: #080808;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffb000;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffb000;
+}
+
+/* HERO */
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.3)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffb000;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: #ffb000;
+    color: black;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* PRODUK */
+.produk {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.produk h2,
+.tentang h2,
+.keunggulan h2,
+.kontak h2 {
+    font-size: 32px;
+    color: #ffb000;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #202020;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255,176,0,.2);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+.card h4 {
+    color: #ffb000;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* TENTANG */
+.tentang {
+    background: #1c1c1c;
+    padding: 80px 12%;
+    text-align: center;
+}
+
+.tentang p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 2;
+    color: #ddd;
+}
+
+/* KEUNGGULAN */
+.keunggulan {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.fitur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.fitur div {
+    background: #202020;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.fitur h3 {
+    color: #ffb000;
+    margin-bottom: 15px;
+}
+
+.fitur p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* KONTAK */
+.kontak {
+    background: #1c1c1c;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.kontak p {
+    margin: 20px 0 30px;
+    color: #ddd;
+}
+
+/* FOOTER */
+footer {
+    background: #050505;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+footer h3 {
+    color: #ffb000;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .produk-container,
+    .fitur {
+        grid-template-columns: 1fr;
+    }
+
+    .produk h2,
+    .tentang h2,
+    .keunggulan h2,
+    .kontak h2 {
+        font-size: 26px;
+    }
+}
